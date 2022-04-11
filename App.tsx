@@ -23,7 +23,7 @@ const App = () => {
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Home'>
-            <Stack.Screen name='Home' component={HomeView}/>
+            <Stack.Screen name='Home' component={HomeView} options={{ headerShown: false }}/>
         </Stack.Navigator>
       </NavigationContainer>
   );

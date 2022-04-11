@@ -1,23 +1,32 @@
 import {Layout} from "../components/Layout";
 import React from "react";
 import {AppTitle} from "../components/AppTitle";
+import {Button} from "../components/Button";
 import styled from "styled-components";
-import { Button } from "react-native";
-import {yellow} from "../constants/constants";
+import {View} from "react-native";
+import {white} from "../constants/constants";
+import {SearchBar} from "../components/SearchBar";
 
-const MButton = styled.Button`
-  background-color: ${yellow};
-  color: red;
+const Buttons = styled(View)`
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-around;
 `
 
 const HomeView = () => {
     return (
         <Layout>
             <AppTitle/>
-            <MButton
-                title="New game"
-                onPress={() => {}}
+            <SearchBar
+                placeholderTextColor={white}
+                placeholder="🔍   Search game by title"
             />
+            <Buttons>
+                <Button text="New random game"/>
+                <Button text="Join game"/>
+                <Button text="All games"/>
+            </Buttons>
         </Layout>
     );
 }
