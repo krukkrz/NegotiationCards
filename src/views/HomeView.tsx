@@ -1,19 +1,23 @@
 import {Layout} from "../components/Layout";
-import { white } from "../constants/constants";
-import styled from "styled-components";
-import {Text} from "react-native";
 import React from "react";
+import {AppTitle} from "../components/AppTitle";
+import styled from "styled-components";
+import { Button } from "react-native";
+import {yellow} from "../constants/constants";
 
-const Header = styled(Text)`
-  color: ${white};
-  font-size: 32px;
-  font-family: "FiraSans_700Bold";
+const MButton = styled.Button`
+  background-color: ${yellow};
+  color: red;
 `
 
 const HomeView = () => {
     return (
         <Layout>
-            <Header>Home</Header>
+            <AppTitle/>
+            <MButton
+                title="New game"
+                onPress={() => {}}
+            />
         </Layout>
     );
 }
