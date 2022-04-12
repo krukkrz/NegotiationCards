@@ -24,11 +24,12 @@ const ButtonText = styled(Text)`
 `
 type Props = {
     text: string;
+    onClick?: () => void;
 }
 
-export const Button = ({text}: Props) => (
+export const Button = ({text, onClick}: Props) => (
     <Wrapper>
-        <Press>
+        <Press onPress={onClick}>
             <ButtonText>{text}</ButtonText>
         </Press>
     </Wrapper>

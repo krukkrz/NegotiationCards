@@ -6,6 +6,8 @@ import styled from "styled-components";
 import {View} from "react-native";
 import {white} from "../constants/constants";
 import {SearchBar} from "../components/SearchBar";
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
+import {RootStackParamList} from "../../App";
 
 const Buttons = styled(View)`
   display: flex;
@@ -14,7 +16,14 @@ const Buttons = styled(View)`
   justify-content: space-around;
 `
 
-const HomeView = () => {
+type Props = NativeStackScreenProps<RootStackParamList, 'Search'>;
+
+const HomeView = ({ navigation }: Props) => {
+
+    const handleAllGamesClick = () => {
+        navigation.navigate('Search')
+    }
+
     return (
         <Layout>
             <AppTitle/>
@@ -25,7 +34,7 @@ const HomeView = () => {
             <Buttons>
                 <Button text="New random game"/>
                 <Button text="Join game"/>
-                <Button text="All games"/>
+                <Button text="All games" onClick={handleAllGamesClick}/>
             </Buttons>
         </Layout>
     );

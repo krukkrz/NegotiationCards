@@ -6,8 +6,14 @@ import {useFonts} from "expo-font";
 import {Lora_400Regular} from "@expo-google-fonts/lora";
 import AppLoading from "expo-app-loading";
 import React from "react";
+import SearchView from "./src/views/SearchView";
 
 const Stack = createNativeStackNavigator()
+
+export type RootStackParamList = {
+    Home: undefined;
+    Search: undefined;
+};
 
 const App = () => {
     let [fontsLoaded] = useFonts({
@@ -20,10 +26,12 @@ const App = () => {
         return <AppLoading />;
     }
 
+    // @ts-ignore
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name='Home' component={HomeView} options={{ headerShown: false }}/>
+            <Stack.Screen name='Search' component={SearchView} options={{ headerShown: false }}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
