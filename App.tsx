@@ -7,12 +7,15 @@ import {Lora_400Regular} from "@expo-google-fonts/lora";
 import AppLoading from "expo-app-loading";
 import React from "react";
 import SearchView from "./src/views/SearchView";
+import PlayerView from "./src/views/PlayerView";
+import {Game} from "./src/data/games";
 
 const Stack = createNativeStackNavigator()
 
 export type RootStackParamList = {
     Home: undefined;
     Search: undefined;
+    PlayerA: { game: Game };
 };
 
 const App = () => {
@@ -32,6 +35,7 @@ const App = () => {
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name='Home' component={HomeView} options={{ headerShown: false }}/>
             <Stack.Screen name='Search' component={SearchView} options={{ headerShown: false }}/>
+            <Stack.Screen name='PlayerA' component={PlayerView} options={{ headerShown: false }}/>
         </Stack.Navigator>
       </NavigationContainer>
   );

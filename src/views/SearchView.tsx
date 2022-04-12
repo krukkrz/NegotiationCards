@@ -4,20 +4,29 @@ import {white} from "../constants/constants";
 import {AppTitle} from "../components/AppTitle";
 import React from "react";
 import styled from "styled-components";
-import {FlatList, ListRenderItemInfo, Text} from "react-native";
+import {FlatList, ListRenderItemInfo, Pressable, Text} from "react-native";
 import {Game, games} from "../data/games";
+import {RootStackParamList} from "../../App";
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
 
-const Item = styled(Text)`
-    color: ${white};
-    font-family: "FiraSans_700Bold";
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 30px;
+const ItemText = styled(Text)`
+  color: ${white};
+  font-family: "FiraSans_700Bold";
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
 `
 
-const SearchView = () => {
-    const renderItem = ({item: game}: ListRenderItemInfo<Game>) => <Item>{ game.title }</Item>
+type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA'>;
+
+const SearchView = ({ navigation }: Props) => {
+    const renderItem = ({item: game}: ListRenderItemInfo<Game>) => (
+        <Pressable onPress={() => navigation.navigate('PlayerA', {game})}>
+            <ItemText>{ game.title }</ItemText>
+        </Pressable>
+    )
+
     return (
         <Layout>
             <AppTitle/>
