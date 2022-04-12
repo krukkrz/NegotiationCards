@@ -22,7 +22,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA'>;
 
 const SearchView = ({ navigation }: Props) => {
     const renderItem = ({item: game}: ListRenderItemInfo<Game>) => (
-        <Pressable onPress={() => navigation.navigate('PlayerA', {game})}>
+        <Pressable onPress={() => navigation.navigate('PlayerA', {game, aOrB:'A'})}>
             <ItemText>{ game.title }</ItemText>
         </Pressable>
     )

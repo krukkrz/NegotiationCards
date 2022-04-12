@@ -15,8 +15,13 @@ const Stack = createNativeStackNavigator()
 export type RootStackParamList = {
     Home: undefined;
     Search: undefined;
-    PlayerA: { game: Game };
+    PlayerA: {
+        game: Game;
+        aOrB: AB;
+    };
 };
+
+export type AB = 'A' | 'B'
 
 const App = () => {
     let [fontsLoaded] = useFonts({

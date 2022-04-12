@@ -45,14 +45,23 @@ const Goals = styled(View)`
 
 const PlayerView = ({navigation, route}: Props) => {
     const [isShown, setIsShown] = useState(false)
+    let aOrB = route.params?.aOrB;
     let title = route.params?.game?.title;
     let situation = route.params?.game?.situation;
-    let role = route.params?.game?.playerA.role;
-    let goals = route.params?.game?.playerA.goals;
+    let role: string
+    let goals: string
+
+    if (aOrB === 'A') {
+        role = route.params?.game?.playerA.role;
+        goals = route.params?.game?.playerA.goals;
+    } else {
+        role = route.params?.game?.playerB.role;
+        goals = route.params?.game?.playerB.goals;
+    }
 
     return (
         <Layout>
-            <PlayerTitle>Player A</PlayerTitle>
+            <PlayerTitle>Player {aOrB}</PlayerTitle>
             <Buttons>
                 <Button text='Home' size='sm' onClick={() => navigation.navigate('Home')} />
                 <Button text='Share game' size='sm'/>
