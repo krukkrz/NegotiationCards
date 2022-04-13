@@ -16,13 +16,17 @@ const Buttons = styled(View)`
   justify-content: space-around;
 `
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Search'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'Search', 'Join'>;
 
 const HomeView = ({ navigation }: Props) => {
 
     const handleAllGamesClick = () => {
         navigation.navigate('Search')
     }
+
+    const handleJoinGameClick = () => {
+        navigation.navigate('Join')
+    };
 
     return (
         <Layout>
@@ -33,7 +37,7 @@ const HomeView = ({ navigation }: Props) => {
             />
             <Buttons>
                 <Button text="New random game"/>
-                <Button text="Join game"/>
+                <Button text="Join game" onClick={handleJoinGameClick}/>
                 <Button text="All games" onClick={handleAllGamesClick}/>
             </Buttons>
         </Layout>

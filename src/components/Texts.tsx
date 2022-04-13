@@ -16,3 +16,7 @@ export const Title = styled(Text)`
 export const CenteredHeadline = styled(Headline)`
   text-align: center;
 `
+
+export const Hint = styled(Title)`
+  text-align: center;
+`

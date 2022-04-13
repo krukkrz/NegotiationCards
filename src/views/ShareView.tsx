@@ -1,17 +1,14 @@
 import {Layout} from "../components/Layout";
-import {CenteredHeadline, Title} from "../components/Texts";
+import {CenteredHeadline, Hint, Title} from "../components/Texts";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../App";
 import styled from "styled-components";
 import SvgQRCode from "react-native-qrcode-svg";
 import {View} from "react-native";
 import {black, white} from "../constants/constants";
+import {CloseButton} from "../components/Button";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Share', 'Home'>;
-
-const Hint = styled(Title)`
-  text-align: center;
-`
 
 const QRWrapper = styled(View)`
   margin-left: auto;
@@ -32,8 +29,10 @@ const Wrapper = styled(View)`
 
 const ShareView = ({navigation, route}: Props) => {
     const title = route.params?.title;
+
     return (
         <Layout>
+            <CloseButton navigation={navigation} route={route}/>
             <Wrapper>
                 <CenteredHeadline>{title}</CenteredHeadline>
                 <Hint>Show this QR code to your oponent</Hint>

@@ -10,6 +10,7 @@ import SearchView from "./src/views/SearchView";
 import PlayerView from "./src/views/PlayerView";
 import {Game} from "./src/data/games";
 import ShareView from "./src/views/ShareView";
+import JoinGameView from "./src/views/JoinGameView";
 
 const Stack = createNativeStackNavigator()
 
@@ -24,6 +25,7 @@ export type RootStackParamList = {
         title: string;
         gameId: number;
     };
+    Join: undefined;
 };
 
 export type AB = 'A' | 'B'
@@ -47,6 +49,7 @@ const App = () => {
             <Stack.Screen name='Search' component={SearchView} options={{ headerShown: false }}/>
             <Stack.Screen name='PlayerA' component={PlayerView} options={{ headerShown: false }}/>
             <Stack.Screen name='Share' component={ShareView} options={{ headerShown: false }}/>
+            <Stack.Screen name='Join' component={JoinGameView} options={{ headerShown: false }}/>
         </Stack.Navigator>
       </NavigationContainer>
   );

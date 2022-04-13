@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import {Pressable, Text, View} from "react-native";
+import {Image, Pressable, Text, View} from "react-native";
 import {black, yellow} from "../constants/constants";
 import React from "react";
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
+import {RootStackParamList} from "../../App";
 
 const Wrapper = styled(View)`
     margin-left: auto;
@@ -64,6 +66,21 @@ type Props = {
     text: string;
     onClick?: () => void;
     size?: Size;
+}
+
+const CloseImage = styled(Image)`
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+`
+type PropsCloseButton = NativeStackScreenProps<RootStackParamList>;
+export const CloseButton = ({ navigation }: PropsCloseButton) => {
+    const handleNavigation = () => navigation.goBack()
+    return (
+        <Pressable onPress={handleNavigation}>
+            <CloseImage source={require('../../assets/Button.png')}/>
+        </Pressable>
+    )
 }
 
 export const Button = ({text, onClick, size = 'lg'}: Props) => {
