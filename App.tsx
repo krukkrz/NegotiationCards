@@ -21,6 +21,10 @@ export type RootStackParamList = {
         game: Game;
         aOrB: AB;
     };
+    PlayerB: {
+        id: any;
+        aOrB: AB;
+    };
     Share: {
         title: string;
         gameId: number;
@@ -48,6 +52,7 @@ const App = () => {
             <Stack.Screen name='Home' component={HomeView} options={{ headerShown: false }}/>
             <Stack.Screen name='Search' component={SearchView} options={{ headerShown: false }}/>
             <Stack.Screen name='PlayerA' component={PlayerView} options={{ headerShown: false }}/>
+            <Stack.Screen name='PlayerB' component={PlayerView} options={{ headerShown: false }}/>
             <Stack.Screen name='Share' component={ShareView} options={{ headerShown: false }}/>
             <Stack.Screen name='Join' component={JoinGameView} options={{ headerShown: false }}/>
         </Stack.Navigator>

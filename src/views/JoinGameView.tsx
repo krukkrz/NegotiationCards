@@ -8,7 +8,7 @@ import {RootStackParamList} from "../../App";
 import {CloseButton} from "../components/Button";
 import {Hint} from "../components/Texts";
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Share', 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'PlayerB'>;
 
 
 const Scanner = styled(BarCodeScanner)`
@@ -40,7 +40,7 @@ const JoinGameView = ({navigation, route}: Props) => {
     // @ts-ignore
     const handleBarCodeScanned = ({ type, data }) => {
         setScanned(true);
-        alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        navigation.navigate('PlayerB', { id: data, aOrB: "B" })
     };
 
     if (hasPermission === null) {

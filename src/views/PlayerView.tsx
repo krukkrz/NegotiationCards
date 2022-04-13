@@ -7,8 +7,9 @@ import styled from "styled-components";
 import {CenteredHeadline, Headline, Title} from "../components/Texts";
 import {Button} from "../components/Button";
 import {white} from "../constants/constants";
+import {Game, games} from "../data/games";
 
-type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA', 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA', 'PlayerB', 'Home'>;
 
 const Buttons = styled(View)`
   display: flex;
@@ -36,19 +37,23 @@ const Goals = styled(View)`
 const PlayerView = ({navigation, route}: Props) => {
     const [isShown, setIsShown] = useState(false)
     let aOrB = route.params?.aOrB;
-    let title = route.params?.game?.title;
-    let gameId = route.params?.game?.id;
-    let situation = route.params?.game?.situation;
+
     let role: string
     let goals: string
+    let game: Game | undefined
 
     if (aOrB === 'A') {
-        role = route.params?.game?.playerA.role;
-        goals = route.params?.game?.playerA.goals;
+        game =  route.params?.game;
     } else {
-        role = route.params?.game?.playerB.role;
-        goals = route.params?.game?.playerB.goals;
+        gameId = parseInt(route.params?.id);
+        game = games.find( g => g.id === gameId);
     }
+
+    role = game?.playerB.role;
+    goals = game?.playerB.goals;
+    let gameId = game?.id;
+    let situation = game?.situation;
+    let title = game?.title;
 
     return (
         <Layout>
