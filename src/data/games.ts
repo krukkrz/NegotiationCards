@@ -14,171 +14,28 @@ type Player = {
 export const games: Game[] = [
     {
         id: 1,
-        title: 'Grocery store',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
+        title: 'Furniture store',
+        situation: 'In a furniture store there are is a table that costs $599.',
         playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
+            role: 'You are a buyer',
+            goals: 'Your goal is to finish with the best offer you can. Final price you should be aiming for is $400.',
         },
         playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
+            role: 'You are a salesman',
+            goals: 'Your goal is to sell this table for its original price. However, since your sales were not great last month, you can not let this customer go.',
         }
     },
     {
         id: 2,
         title: 'Airport',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
+        situation: 'At the Arlanda airport there is a huge rush before Easter Holiday. Even though there is a Fast Track entry, only few passengers could use it. The rest of them stands in a long line.',
         playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
+            role: 'You are the Fast Track information worker.',
+            goals: 'You should let go through Fast Track only the disabled, or people with Fast Track ticket. You know that if you let up to 3-4 unqualified people through that entry, nobody will see the difference. However, there are thousands of people at the airport. That would be unfair to the rest of people standing in the line.',
         },
         playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
+            role: 'You are a passenger. You came an hour before your flight, but when you saw a huge line to the security check, you realised, that you will most probably not gonna make it. However you\'ve noticed a Fast Track entry with an airport worker next to it.',
+            goals: 'Your goal is to convince the airport worker (player A) to let you go through Fast Track entry, even though you are not qualified for it.',
         }
     },
-    {
-        id: 3,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 4,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 5,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 6,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 7,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 8,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 9,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 10,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 11,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 12,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    },
-    {
-        id: 13,
-        title: 'Salary increase',
-        situation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        playerA: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        },
-        playerB: {
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-            goals: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit imperdiet sit at ac leo lectus morbi. Purus arcu interdum commodo quis platea orci volutpat. Id commodo volutpat scelerisque in a. Eget enim facilisis sed nisi vulputate egestas integer nunc. Nibh vitae justo.',
-        }
-    }
 ]
