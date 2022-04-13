@@ -1,5 +1,5 @@
 import {Layout} from "../components/Layout";
-import {Text, View} from "react-native";
+import {ScrollView, Text, View} from "react-native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../App";
 import React, {useState} from "react";
@@ -57,31 +57,33 @@ const PlayerView = ({navigation, route}: Props) => {
 
     return (
         <Layout>
-            <CenteredHeadline>Player {aOrB}</CenteredHeadline>
-            <Buttons>
-                <Button text='Home' size='sm' onClick={() => navigation.navigate('Home')} />
-                <Button text='Share game' size='sm' onClick={() => navigation.navigate('Share', {title, gameId})}/>
-            </Buttons>
-            <Headline>{title}</Headline>
-            <Section>
-                <Title>Situation:</Title>
-                <Paragraph>{situation}</Paragraph>
-            </Section>
-            <Section>
-                <Title>Your role:</Title>
-                <Paragraph>{role}</Paragraph>
-            </Section>
-            <Section>
-                <Goals>
-                    <Title>Your goals:</Title>
-                    <Button
-                        text={isShown?<Text>Hide</Text>:<Text>Reveal</Text>}
-                        size='sm'
-                        onClick={() => setIsShown(!isShown)}
-                    />
-                </Goals>
-                { isShown? (<Paragraph>{goals}</Paragraph>) : <></> }
-            </Section>
+            <ScrollView>
+                <CenteredHeadline>Player {aOrB}</CenteredHeadline>
+                <Buttons>
+                    <Button text='Home' size='sm' onClick={() => navigation.navigate('Home')} />
+                    <Button text='Share game' size='sm' onClick={() => navigation.navigate('Share', {title, gameId})}/>
+                </Buttons>
+                <Headline>{title}</Headline>
+                <Section>
+                    <Title>Situation:</Title>
+                    <Paragraph>{situation}</Paragraph>
+                </Section>
+                <Section>
+                    <Title>Your role:</Title>
+                    <Paragraph>{role}</Paragraph>
+                </Section>
+                <Section>
+                    <Goals>
+                        <Title>Your goals:</Title>
+                        <Button
+                            text={isShown?<Text>Hide</Text>:<Text>Reveal</Text>}
+                            size='sm'
+                            onClick={() => setIsShown(!isShown)}
+                        />
+                    </Goals>
+                    { isShown? (<Paragraph>{goals}</Paragraph>) : <></> }
+                </Section>
+            </ScrollView>
         </Layout>
     )
 }

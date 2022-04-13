@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { blue } from "../constants/constants"
+import {SafeAreaView} from "react-native";
 
-// @ts-ignore
-export const Layout = styled.View`
+export const Layout = styled(SafeAreaView)`
     padding-top: 40px;
     padding-right: 20px;
     padding-left: 20px;

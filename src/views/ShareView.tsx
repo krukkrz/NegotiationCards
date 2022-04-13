@@ -29,6 +29,7 @@ const Wrapper = styled(View)`
 
 const ShareView = ({navigation, route}: Props) => {
     const title = route.params?.title;
+    const gameId = route.params?.gameId;
 
     return (
         <Layout>
@@ -38,7 +39,7 @@ const ShareView = ({navigation, route}: Props) => {
                 <Hint>Show this QR code to your oponent</Hint>
                 <QRWrapper>
                     <SvgQRCode
-                        value="http://example.com"
+                        value={`${gameId}`}
                         size={250}
                         color={black}
                         backgroundColor={white}
