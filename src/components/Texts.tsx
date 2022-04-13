@@ -7,3 +7,12 @@ export const Headline = styled(Text)`
   font-size: 32px;
   font-family: "FiraSans_700Bold";
 `
+export const Title = styled(Text)`
+  color: ${white};
+  font-size: 20px;
+  font-family: "FiraSans_700Bold";
+`
+
+export const CenteredHeadline = styled(Headline)`
+  text-align: center;
+`

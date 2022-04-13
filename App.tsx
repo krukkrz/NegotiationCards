@@ -9,6 +9,7 @@ import React from "react";
 import SearchView from "./src/views/SearchView";
 import PlayerView from "./src/views/PlayerView";
 import {Game} from "./src/data/games";
+import ShareView from "./src/views/ShareView";
 
 const Stack = createNativeStackNavigator()
 
@@ -18,6 +19,10 @@ export type RootStackParamList = {
     PlayerA: {
         game: Game;
         aOrB: AB;
+    };
+    Share: {
+        title: string;
+        gameId: number;
     };
 };
 
@@ -41,6 +46,7 @@ const App = () => {
             <Stack.Screen name='Home' component={HomeView} options={{ headerShown: false }}/>
             <Stack.Screen name='Search' component={SearchView} options={{ headerShown: false }}/>
             <Stack.Screen name='PlayerA' component={PlayerView} options={{ headerShown: false }}/>
+            <Stack.Screen name='Share' component={ShareView} options={{ headerShown: false }}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
