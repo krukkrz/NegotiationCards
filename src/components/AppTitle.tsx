@@ -13,7 +13,7 @@ const Header = styled(Text)`
 const TitleBackground = styled(View)`
   background-color: ${turquoise};
   margin: 15px;
-  height: 56px;
+  padding: 5px;
   border-radius: 11px;
 `
 
