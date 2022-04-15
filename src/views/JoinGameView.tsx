@@ -14,6 +14,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'PlayerB'>;
 
 const Scanner = styled(Camera)`
   height: 80%;
+  max-height: 400px;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
