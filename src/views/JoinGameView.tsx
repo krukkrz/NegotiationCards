@@ -2,16 +2,17 @@ import {Layout} from "../components/Layout";
 import {Text, View} from "react-native";
 import {BarCodeScanner} from "expo-barcode-scanner";
 import {useEffect, useState} from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../App";
 import {CloseButton} from "../components/Button";
 import {Hint} from "../components/Texts";
+import { Camera } from "expo-camera";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'PlayerB'>;
 
 
-const Scanner = styled(BarCodeScanner)`
+const Scanner = styled(Camera)`
   height: 80%;
   width: 95%;
   margin-left: auto;
@@ -57,6 +58,9 @@ const JoinGameView = ({navigation, route}: Props) => {
                 <Hint>Scan QR code from your oponent app</Hint>
                 <Scanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+                    barCodeScannerSettings={{
+                        barCodeTypes: [BarCodeScanner.Constants.BarCodeType.qr],
+                    }}
                 />
             </Wrapper>
         </Layout>

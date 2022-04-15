@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 import {TextInput} from "react-native";
 import {white} from "../constants/constants";
 

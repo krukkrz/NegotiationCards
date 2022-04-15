@@ -3,7 +3,7 @@ import {SearchBar} from "../components/SearchBar";
 import {white} from "../constants/constants";
 import {AppTitle} from "../components/AppTitle";
 import React, {useState} from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import {FlatList, ListRenderItemInfo, Pressable, Text} from "react-native";
 import {Game, games} from "../data/games";
 import {RootStackParamList} from "../../App";

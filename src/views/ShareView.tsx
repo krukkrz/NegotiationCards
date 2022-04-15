@@ -1,8 +1,8 @@
 import {Layout} from "../components/Layout";
-import {CenteredHeadline, Hint, Title} from "../components/Texts";
+import {CenteredHeadline, Hint} from "../components/Texts";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../App";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import SvgQRCode from "react-native-qrcode-svg";
 import {View} from "react-native";
 import {black, white} from "../constants/constants";

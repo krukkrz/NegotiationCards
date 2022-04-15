@@ -2,7 +2,7 @@ import {Layout} from "../components/Layout";
 import React from "react";
 import {AppTitle} from "../components/AppTitle";
 import {Button} from "../components/Button";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import {ScrollView, View} from "react-native";
 import {white} from "../constants/constants";
 import {SearchBar} from "../components/SearchBar";
