@@ -7,10 +7,11 @@ import {Lora_400Regular} from "@expo-google-fonts/lora";
 import AppLoading from "expo-app-loading";
 import React from "react";
 import SearchView from "./src/views/SearchView";
-import PlayerView from "./src/views/PlayerView";
 import {Game} from "./src/data/games";
 import ShareView from "./src/views/ShareView";
 import JoinGameView from "./src/views/JoinGameView";
+import PlayerBView from "./src/views/PlayerBView";
+import PlayerAView from "./src/views/PlayerAView";
 
 const Stack = createNativeStackNavigator()
 
@@ -51,8 +52,8 @@ const App = () => {
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name='Home' component={HomeView} options={{ headerShown: false }}/>
             <Stack.Screen name='Search' component={SearchView} options={{ headerShown: false }}/>
-            <Stack.Screen name='PlayerA' component={PlayerView} options={{ headerShown: false }}/>
-            <Stack.Screen name='PlayerB' component={PlayerView} options={{ headerShown: false }}/>
+            <Stack.Screen name='PlayerA' component={PlayerAView} options={{ headerShown: false }}/>
+            <Stack.Screen name='PlayerB' component={PlayerBView} options={{ headerShown: false }}/>
             <Stack.Screen name='Share' component={ShareView} options={{ headerShown: false }}/>
             <Stack.Screen name='Join' component={JoinGameView} options={{ headerShown: false }}/>
         </Stack.Navigator>

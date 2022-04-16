@@ -1,16 +1,14 @@
+import {AB} from "../../App";
+import {Game} from "../data/games";
+import React, {useState} from "react";
 import {Layout} from "../components/Layout";
 import {ScrollView, Text, View} from "react-native";
-import {NativeStackScreenProps} from "@react-navigation/native-stack";
-import {RootStackParamList} from "../../App";
-import React, {useState} from "react";
-// @ts-ignore
-import styled from "styled-components/native";
 import {CenteredHeadline, Headline, Title} from "../components/Texts";
 import {Button} from "../components/Button";
 import {white} from "../constants/constants";
-import {Game, games} from "../data/games";
+// @ts-ignore
+import styled from "styled-components/native";
 
-type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA'>;
 
 const Buttons = styled(View)`
   display: flex;
@@ -35,41 +33,38 @@ const Goals = styled(View)`
   flex-direction: row;
 `
 
-const PlayerView = ({navigation, route}: Props) => {
-    const [isShown, setIsShown] = useState(false)
-    let aOrB = route.params?.aOrB;
+type PlayerProps = {
+    aOrB: AB;
+    game?: Game
+    navigation: any
+}
 
-    let role: string | undefined
-    let goals: string | undefined
-    let gameId: number
-    let game: Game | undefined
+const PlayerView = ({aOrB, game, navigation}: PlayerProps) => {
+    const [isShown, setIsShown] = useState(false)
+    const title = game?.title;
+    const gameId = game?.id;
+    let role: string;
+    let goals: string;
 
     if (aOrB === 'A') {
-        game =  route.params?.game;
-        gameId = game?.id;
+        role = game?.playerA.role || '';
+        goals = game?.playerA.goals || '';
     } else {
-        // @ts-ignore
-        gameId = parseInt(route.params?.id) || 0;
-        game = games.find( g => g.id === gameId);
+        role = game?.playerB.role || '';
+        goals = game?.playerB.goals || '';
     }
-
-    role = game?.playerB?.role;
-    goals = game?.playerB.goals;
-    let situation = game?.situation;
-    let title = game?.title || '';
-
     return (
         <Layout>
             <ScrollView>
                 <CenteredHeadline>Player {aOrB}</CenteredHeadline>
                 <Buttons>
                     <Button text='Home' size='sm' onClick={() => navigation.navigate('Home')} />
-                    <Button text='Share game' size='sm' onClick={() => navigation.navigate('Share', {title, gameId})}/>
+                    <Button text='Share game' size='sm' onClick={() => navigation.navigate('Share', { title, gameId})}/>
                 </Buttons>
                 <Headline>{title}</Headline>
                 <Section>
                     <Title>Situation:</Title>
-                    <Paragraph>{situation}</Paragraph>
+                    <Paragraph>{game?.situation}</Paragraph>
                 </Section>
                 <Section>
                     <Title>Your role:</Title>
@@ -90,4 +85,5 @@ const PlayerView = ({navigation, route}: Props) => {
         </Layout>
     )
 }
+
 export default PlayerView
