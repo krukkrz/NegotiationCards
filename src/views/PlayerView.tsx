@@ -3,13 +3,14 @@ import {ScrollView, Text, View} from "react-native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../App";
 import React, {useState} from "react";
+// @ts-ignore
 import styled from "styled-components/native";
 import {CenteredHeadline, Headline, Title} from "../components/Texts";
 import {Button} from "../components/Button";
 import {white} from "../constants/constants";
 import {Game, games} from "../data/games";
 
-type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA', 'PlayerB', 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA'>;
 
 const Buttons = styled(View)`
   display: flex;
@@ -38,22 +39,24 @@ const PlayerView = ({navigation, route}: Props) => {
     const [isShown, setIsShown] = useState(false)
     let aOrB = route.params?.aOrB;
 
-    let role: string
-    let goals: string
+    let role: string | undefined
+    let goals: string | undefined
+    let gameId: number
     let game: Game | undefined
 
     if (aOrB === 'A') {
         game =  route.params?.game;
+        gameId = game?.id;
     } else {
-        gameId = parseInt(route.params?.id);
+        // @ts-ignore
+        gameId = parseInt(route.params?.id) || 0;
         game = games.find( g => g.id === gameId);
     }
 
-    role = game?.playerB.role;
+    role = game?.playerB?.role;
     goals = game?.playerB.goals;
-    let gameId = game?.id;
     let situation = game?.situation;
-    let title = game?.title;
+    let title = game?.title || '';
 
     return (
         <Layout>
@@ -76,7 +79,7 @@ const PlayerView = ({navigation, route}: Props) => {
                     <Goals>
                         <Title>Your goals:</Title>
                         <Button
-                            text={isShown?<Text>Hide</Text>:<Text>Reveal</Text>}
+                            text={isShown?'Hide':'Reveal'}
                             size='sm'
                             onClick={() => setIsShown(!isShown)}
                         />

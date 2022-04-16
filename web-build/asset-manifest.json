@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/static/js/app.1b2cd8a1.chunk.js",
-    "app.js.map": "/static/js/app.1b2cd8a1.chunk.js.map",
+    "app.js": "/static/js/app.610a91b1.chunk.js",
+    "app.js.map": "/static/js/app.610a91b1.chunk.js.map",
     "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
     "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
-    "static/js/2.6a11cfd8.chunk.js": "/static/js/2.6a11cfd8.chunk.js",
-    "static/js/2.6a11cfd8.chunk.js.map": "/static/js/2.6a11cfd8.chunk.js.map",
+    "static/js/2.94e80e69.chunk.js": "/static/js/2.94e80e69.chunk.js",
+    "static/js/2.94e80e69.chunk.js.map": "/static/js/2.94e80e69.chunk.js.map",
     "fonts/FiraSans_100Thin.ttf": "/./fonts/FiraSans_100Thin.ttf",
     "fonts/FiraSans_100Thin_Italic.ttf": "/./fonts/FiraSans_100Thin_Italic.ttf",
     "fonts/FiraSans_200ExtraLight.ttf": "/./fonts/FiraSans_200ExtraLight.ttf",
@@ -38,11 +38,11 @@
     "index.html": "/index.html",
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
-    "static/js/2.6a11cfd8.chunk.js.LICENSE.txt": "/static/js/2.6a11cfd8.chunk.js.LICENSE.txt"
+    "static/js/2.94e80e69.chunk.js.LICENSE.txt": "/static/js/2.94e80e69.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.2e9f1821.js",
-    "static/js/2.6a11cfd8.chunk.js",
-    "static/js/app.1b2cd8a1.chunk.js"
+    "static/js/2.94e80e69.chunk.js",
+    "static/js/app.610a91b1.chunk.js"
   ]
 }

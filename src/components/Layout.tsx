@@ -1,18 +1,22 @@
+// @ts-ignore
 import styled from "styled-components/native";
 import { blue } from "../constants/constants"
 import {SafeAreaView, View} from "react-native";
 
 export const LayoutWrapper = styled(SafeAreaView)`
-    flex: 1;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: ${blue};
+    min-height: 100%;
+    display: flex;
+    align-items: center;
 `
 
 const LimitWidth = styled(View)`
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: ${blue};
+  width: 100%;
   max-width: 500px;
-  height: 100%;
+  min-height: 90%;
 `
 
 export const Layout = (props: { children: any; }) => (

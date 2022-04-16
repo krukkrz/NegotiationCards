@@ -1,3 +1,4 @@
+// @ts-ignore
 import styled from "styled-components/native";
 import {Image, Pressable, Text, View} from "react-native";
 import {black, yellow} from "../constants/constants";

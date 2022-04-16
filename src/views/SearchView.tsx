@@ -3,11 +3,13 @@ import {SearchBar} from "../components/SearchBar";
 import {white} from "../constants/constants";
 import {AppTitle} from "../components/AppTitle";
 import React, {useState} from "react";
+// @ts-ignore
 import styled from "styled-components/native";
 import {FlatList, ListRenderItemInfo, Pressable, Text} from "react-native";
 import {Game, games} from "../data/games";
 import {RootStackParamList} from "../../App";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
+import {CloseButton} from "../components/Button";
 
 const ItemText = styled(Text)`
   color: ${white};
@@ -20,7 +22,7 @@ const ItemText = styled(Text)`
 
 type Props = NativeStackScreenProps<RootStackParamList, 'PlayerA'>;
 
-const SearchView = ({ navigation }: Props) => {
+const SearchView = ({ navigation, route }: Props) => {
     const [searchText, setSearchText] = useState("")
 
     const renderItem = ({item: game}: ListRenderItemInfo<Game>) => (
@@ -41,7 +43,7 @@ const SearchView = ({ navigation }: Props) => {
 
     return (
         <Layout>
-            <AppTitle/>
+            <CloseButton navigation={navigation} route={route}/>
             <SearchBar
                 placeholderTextColor={white}
                 placeholder="🔍   Search game by title"

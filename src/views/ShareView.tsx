@@ -2,6 +2,7 @@ import {Layout} from "../components/Layout";
 import {CenteredHeadline, Hint} from "../components/Texts";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../App";
+// @ts-ignore
 import styled from "styled-components/native";
 import SvgQRCode from "react-native-qrcode-svg";
 import {View} from "react-native";
@@ -19,6 +20,8 @@ const QRWrapper = styled(View)`
   padding: 25px;
   border-radius: 20px;
 `
+
+const QRCode = styled(SvgQRCode)``
 
 const Wrapper = styled(View)`
   display: flex;
@@ -38,7 +41,7 @@ const ShareView = ({navigation, route}: Props) => {
                 <CenteredHeadline>{title}</CenteredHeadline>
                 <Hint>Show this QR code to your oponent</Hint>
                 <QRWrapper>
-                    <SvgQRCode
+                    <QRCode
                         value={`${gameId}`}
                         size={250}
                         color={black}
